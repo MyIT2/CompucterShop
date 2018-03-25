@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.mycompany.testwebproject.mybatisMappers" > 
+
+<resultMap id="setId_device" type="com.mycompany.testwebproject.dao.type.TestType"> 
+<id property="id" column="id"/> 
+<result property="testStr" column="testStr"/> 
+</resultMap> 
+
+<!— List<AnswerDTO> getAnswerByQuestion(Long idQuestion);--> 
+<select id="getCompucterById" resultMap="setId_compucter"parametrType = "javalong.long"> 
+SELECT 
+ec.id, 
+ec.detail   
+FROM 
+AS ec;
+WHERE
+mo.id = #{id}     
+</select>
+<insert id="insertCompucter" parameterType="com.mycompany.maven777.Dao.Type.Device"> 
+INSERT INTO 
+Compucter(id,detail) 
+Values 
+(#{id},  
+#{detail}) 
+</insert> 
+<update id="updateCompucterById" parameterType="com.mycompany.maven777.Dao.Type.Device" resultMap="testResult"> 
+UPDATE 
+Compucter
+SET 
+detail = #{detail},  
+WHERE 
+id = #{id} 
+</update> 
+<delete id="deleteCompucterById" parameterType="com.mycompany.maven777.Dao.Type.Device" resultMap="testResult"> 
+DELETE FROM 
+Compucter 
+WHERE 
+Device.id = #{id} 
+</delete>
+</mapper>

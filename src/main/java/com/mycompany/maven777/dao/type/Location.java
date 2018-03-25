@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.maven777.dao.type;
-
-/**
- *
- * @author PC
- */
 public class Location {
+    private String place;
+    private int id_location;
+
+    public String getPlace() {
+        return place;
+    }
+
+    public int getId_location() {
+        return id_location;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public void setId_location(int id_location) {
+        this.id_location = id_location;
+    }
     
 }

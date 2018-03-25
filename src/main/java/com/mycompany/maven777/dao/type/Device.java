@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.maven777.dao.type;
+public class Device 
+{
+    private String name;
+    private int id_device;
 
-/**
- *
- * @author PC
- */
-public class Device {
+    public String getName() {
+        return name;
+    }
+
+    public int getId_device() {
+        return id_device;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId_device(int id_device) {
+        this.id_device = id_device;
+    }
     
 }

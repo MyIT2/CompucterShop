@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.mycompany.testwebproject.mybatisMappers" > 
+
+<resultMap id="setId_personal" type="com.mycompany.testwebproject.dao.type.TestType"> 
+<id property="id" column="id"/> 
+<result property="testStr" column="testStr"/> 
+</resultMap> 
+
+<select id="getLocationById" resultMap="setId_personal"parametrType = "javalong.long"> 
+SELECT 
+ec.id, 
+ec.position,                         
+FROM 
+AS ec;
+WHERE
+mo.id = #{id}     
+</select> 
+<insert id="insertPersonal" parameterType="com.mycompany.maven777.Dao.Type.Personal"> 
+INSERT INTO 
+personal(id,position) 
+Values 
+(#{id}, 
+#{position}) 
+</insert> 
+<update id="updatePersonalById" parameterType="com.mycompany.maven777.Dao.Type.Personal" resultMap="testResult"> 
+UPDATE 
+personal 
+SET 
+Position = #{position},  
+WHERE 
+id = #{id} 
+</update> 
+<delete id="deleteEngineById" parameterType="com.mycompany.maven777.Dao.Type.Personal" resultMap="testResult"> 
+DELETE FROM 
+personal
+WHERE 
+personal.id = #{id} 
+</delete>
+
+</mapper>
