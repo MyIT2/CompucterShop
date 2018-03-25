@@ -19,17 +19,17 @@ CompucterMappers comp;
 
     @Override
     public Compucter getCompucterById(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return comp.getCompucterById(id);
     }
 
     @Override
     public void update(Compucter id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    comp.update(id);    
     }
 
     @Override
     public void deleteIdByCompucter(Compucter id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    comp.deleteIdByCompucter(id);
     }
 
 }

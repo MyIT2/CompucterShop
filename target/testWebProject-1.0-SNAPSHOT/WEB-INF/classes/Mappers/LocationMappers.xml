@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.mycompany.testwebproject.mybatisMappers" > 
+
+<resultMap id="setId_location" type="com.mycompany.testwebproject.dao.type.TestType"> 
+<id property="id" column="id"/> 
+<result property="testStr" column="testStr"/> 
+</resultMap> 
+
+<!— List<AnswerDTO> getAnswerByQuestion(Long idQuestion);--> 
+<select id="getLocationById" resultMap="setId_location"parametrType = "javalong.long"> 
+SELECT 
+ec.id, 
+ec.country
+ec.city
+ec.adress
+ec.working_house             
+FROM 
+AS ec;
+WHERE
+mo.id = #{id}        
+</select> 
+<insert id="insertLocation" parameterType="com.mycompany.maven777.Dao.Type.Location"> 
+INSERT INTO 
+location(id,country,city,adress,working_house) 
+Values 
+(#{id}, 
+#{country}, 
+#{adress}, 
+#{working_house}) 
+</insert> 
+<update id="updateLocationById" parameterType="com.mycompany.maven777.Dao.Type.Location" resultMap="testResult"> 
+UPDATE 
+Location 
+SET 
+country = #{country},
+adress = #{adress},  
+working_house = #{working_house}
+WHERE 
+id = #{id} 
+</update> 
+<delete id="deleteLocationById" parameterType="com.mycompany.maven777.Dao.Type.Location" resultMap="testResult"> 
+DELETE FROM 
+location 
+WHERE 
+Location.id = #{id} 
+</delete>
+
+</mapper>

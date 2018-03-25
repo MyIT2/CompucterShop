@@ -17,18 +17,19 @@ public  class PersonalServiceImpl implements PersonalService
 
     @Override
     public Personal getPersonalById(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return comp.getPersonalById(id);
     }
 
     @Override
     public void update(Personal id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    comp.update(id);
     }
 
     @Override
-    public void deleteIdByPersonal(Personal id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deleteIdByPersonal(Long id) {
+    comp.deleteIdByPersonal(id);
     }
+    
 }
 
 

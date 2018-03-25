@@ -5,11 +5,11 @@ import java.util.List;
 
 public interface DeviceMappers 
 {
-public DeviceMappers getDeviceById(Long id); 
+public Device getDeviceById(Long id); 
 
 /** Сохраняет состояние объекта group в базе данных 
-* @param brand */ 
-public void update(Device brand); 
+* @param id */ 
+public void update(Device id); 
 
 /** Удаляет запись об объекте из базы данных 
 * @param id */ 

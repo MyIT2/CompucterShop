@@ -13,7 +13,7 @@ public interface LocationMappers
 
     /** Удаляет запись об объекте из базы данных 
     * @param id */ 
-    public void deleteIdByLocation(Location id); 
+    public void deleteIdByLocation(Long id); 
 
     /** Возвращает список объектов соответствующих всем записям в базе данных 
     * @return */ 

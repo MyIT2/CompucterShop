@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface PersonalMappers       
 {   
-    public PersonalMappers getPersonalById(Long id); 
+    public Personal getPersonalById(Long id); 
 
     /** Сохраняет состояние объекта group в базе данных 
     * @param id*/ 
@@ -13,7 +13,7 @@ public interface PersonalMappers
 
     /** Удаляет запись об объекте из базы данных 
     * @param id */ 
-    public void deleteIdByPersonal(Personal id); 
+    public void deleteIdByPersonal(Long id); 
 
     /** Возвращает список объектов соответствующих всем записям в базе данных 
     * @return */ 

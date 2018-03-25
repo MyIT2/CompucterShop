@@ -5,11 +5,11 @@ import java.util.List;
 
 public interface CompucterMappers
 { 
-     public PersonalMappers getCompucterById(Long id); 
+     public Compucter getCompucterById(Long id); 
 
     /** Сохраняет состояние объекта group в базе данных 
-    * @param brand */ 
-    public void update(Compucter brand); 
+    * @param id */ 
+    public void update(Compucter id); 
 
     /** Удаляет запись об объекте из базы данных 
     * @param id */ 

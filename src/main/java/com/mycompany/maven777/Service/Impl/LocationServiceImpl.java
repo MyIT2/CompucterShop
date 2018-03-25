@@ -20,17 +20,17 @@ LocationMappers comp;
 
     @Override
     public Location getLocationById(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return comp.getLocationById(id);
     }
 
     @Override
     public void update(Location id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    comp.update(id);
     }
 
     @Override
     public void deleteIdByLocation(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    comp.deleteIdByLocation(id);
     }
 
 }

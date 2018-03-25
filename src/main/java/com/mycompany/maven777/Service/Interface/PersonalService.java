@@ -12,10 +12,11 @@ public interface PersonalService {
 
     /** Удаляет запись об объекте из базы данных 
     * @param id */ 
-    public void deleteIdByPersonal(Personal id); 
+    public void deleteIdByPersonal(Long id); 
 
     /** Возвращает список объектов соответствующих всем записям в базе данных 
     * @return */ 
     public List<Personal> getAll();
+    
 
 }

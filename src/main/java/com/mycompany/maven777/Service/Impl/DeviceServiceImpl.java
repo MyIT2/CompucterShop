@@ -17,16 +17,16 @@ public class DeviceServiceImpl implements DeviceService
 
     @Override
     public Device getDeviceById(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return comp.getDeviceById(id);
     }
 
     @Override
     public void update(Device id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    comp.update(id);
     }
 
     @Override
     public void deleteIdByDevice(Device id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    comp.deleteIdByDevice(id);
     }
 }
