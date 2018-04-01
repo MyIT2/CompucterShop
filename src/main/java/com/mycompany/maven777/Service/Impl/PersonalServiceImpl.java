@@ -21,13 +21,17 @@ public  class PersonalServiceImpl implements PersonalService
     }
 
     @Override
-    public void update(Personal id) {
-    comp.update(id);
+    public void update(Personal personal) {
+    comp.update(personal);
     }
 
     @Override
-    public void deleteIdByPersonal(Long id) {
-    comp.deleteIdByPersonal(id);
+    public void delete(Long id) {
+    comp.delete(id);
+    }
+    @Override
+    public void insert(Personal personal) {
+    comp.insert(personal);
     }
     
 }

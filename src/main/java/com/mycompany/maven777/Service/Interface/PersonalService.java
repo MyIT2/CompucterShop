@@ -5,18 +5,10 @@ public interface PersonalService {
 
 
      public Personal getPersonalById(Long id); 
-
-    /** Сохраняет состояние объекта group в базе данных 
-    * @param id */ 
-    public void update(Personal id); 
-
-    /** Удаляет запись об объекте из базы данных 
-    * @param id */ 
-    public void deleteIdByPersonal(Long id); 
-
-    /** Возвращает список объектов соответствующих всем записям в базе данных 
-    * @return */ 
+    public void update(Personal personal); 
+    public void delete(Long id); 
     public List<Personal> getAll();
+    public void insert(Personal personal); 
     
 
 }

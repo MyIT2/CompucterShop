@@ -3,7 +3,7 @@ import com.mycompany.maven777.Service.Interface.PersonalService;
 import com.mycompany.maven777.dao.type.Personal;
 import java.util.List; 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping; 
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,27 +21,27 @@ public List<Personal> getAll()
 return comp.getAll();
 }
 
-@RequestMapping(value = "/insertPersonalById/insertId",method = RequestMethod.POST) 
-public Personal insertPersonalById(@PathVariable("insertId") Integer insertId)
+@RequestMapping(value = "/insert/",method = RequestMethod.POST) 
+public void insert(@RequestBody Personal personal)
 { 
-return comp.insertPersonalById(id);
+comp.insert(personal);
 } 
 
-@RequestMapping(value = "/updatePersonalById/updateId",method = RequestMethod.PUT) 
-public Personal updatePersonalById(
-        @PathVariable("updateId") Integer updateId)
+@RequestMapping(value = "/update/",method = RequestMethod.PUT) 
+public void update(@RequestBody  Personal personal)
+
 { 
-return comp.updatePersonalById(id); 
+    comp.update(personal);
 } 
 
-@RequestMapping(value="/deleteBrandById/deleteId" , method = RequestMethod.DELETE) 
-public void deletePersonalById(@PathVariable("deleteId") Long id )
+@RequestMapping(value="/delete/" , method = RequestMethod.DELETE) 
+public void delete(@RequestParam("delete")Long id )
 { 
-comp.deleteIdByPersonal(id); 
+comp.delete(id); 
 }
 @RequestMapping(value="getPersonalById/idBrand",method = RequestMethod.GET) 
 public Personal getPersonalById(
-        @RequestParam(value = "idBrand",required = false,defaultValue = "0") int id){ 
-return comp.getPersonalById(id); 
+        @RequestParam(value = "idBrand",required = false,defaultValue = "0")Long id){ 
+return comp.getPersonalById(id);
 } 
 }

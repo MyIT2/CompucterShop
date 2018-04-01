@@ -21,12 +21,16 @@ public class DeviceServiceImpl implements DeviceService
     }
 
     @Override
-    public void update(Device id) {
-    comp.update(id);
+    public void update(Device device) {
+    comp.update(device);
     }
 
     @Override
-    public void deleteIdByDevice(Device id) {
-    comp.deleteIdByDevice(id);
+    public void delete(Long id) {
+    comp.delete(id);
+    }
+    @Override
+    public void insert(Device device) {
+    comp.insert(device);
     }
 }

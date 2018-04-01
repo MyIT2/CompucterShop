@@ -24,13 +24,17 @@ LocationMappers comp;
     }
 
     @Override
-    public void update(Location id) {
-    comp.update(id);
+    public void update(Location location) {
+    comp.update(location);
     }
 
     @Override
-    public void deleteIdByLocation(Long id) {
-    comp.deleteIdByLocation(id);
+    public void delete(Long id) {
+    comp.delete(id);
+    }
+    @Override
+    public void insert(Location location) {
+    comp.insert(location);
     }
 
 }

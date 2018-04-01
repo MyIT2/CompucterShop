@@ -23,13 +23,18 @@ CompucterMappers comp;
     }
 
     @Override
-    public void update(Compucter id) {
-    comp.update(id);    
+    public void update(Compucter compucter) {
+    comp.update(compucter);    
     }
 
     @Override
-    public void deleteIdByCompucter(Compucter id) {
-    comp.deleteIdByCompucter(id);
+    public void delete(Long id) {
+    comp.delete(id);
     }
+    @Override
+    public void insert(Compucter compucter) {
+    comp.insert(compucter);
+    }
+    
 
 }

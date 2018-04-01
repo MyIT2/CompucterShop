@@ -1,8 +1,9 @@
 package com.mycompany.maven777.controller;
+import com.mycompany.maven777.Service.Interface.LocationService;
 import com.mycompany.maven777.dao.type.Location;
 import java.util.List; 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping; 
 import org.springframework.web.bind.annotation.RequestMethod; 
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,35 +13,35 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerLocation 
 {
 @Autowired
-ControllerLocation  comp;
+LocationService comp;
 @RequestMapping(value="/", method = RequestMethod.GET) 
-public List<ControllerLocation> getAll()
+public List<Location> getAll()
 { 
-return comp.getAll(); 
+return comp.getAll();
 }
-@RequestMapping(value = "/insertLocationById/insertId",method = RequestMethod.POST) 
-public Location insertLocationById(
-        @PathVariable("insertId") Integer insertId)
+@RequestMapping(value = "/insert/",method = RequestMethod.POST) 
+public void insert(
+       @RequestBody Location location)
 { 
-return comp.insertLocationById(insertId); 
+    comp.insert(location); 
 } 
 
-@RequestMapping(value = "/updateLocationById/updateId",method = RequestMethod.PUT) 
-public Location updateLocationById(
-        @PathVariable("updateId") Integer updateId)
+@RequestMapping(value = "/update/",method = RequestMethod.PUT) 
+public void update(
+        @RequestBody Location location)
 { 
-return comp.updateLocationById(updateId); 
+    comp.update(location); 
 } 
 
-@RequestMapping(value="/deleteLocationById/deleteId" , method = RequestMethod.DELETE) 
-public Location deleteLocationById(
-        @PathVariable("deleteId") Integer deleteId )
+@RequestMapping(value="/delete/" , method = RequestMethod.DELETE) 
+public void  delete(
+       @RequestParam("delete")Long id)
 { 
-return comp.deleteLocationById(deleteId); 
+    comp.delete(id); 
 }
-@RequestMapping(value="getLocationById/idBrand",method = RequestMethod.GET) 
+@RequestMapping(value="/getLocationById/",method = RequestMethod.GET) 
 public Location getLocationById(
-        @RequestParam(value = "idBrand",required = false,defaultValue = "0") int id){ 
+        @RequestParam(value = "idlocation",required = false,defaultValue = "0")Long id){ 
 return comp.getLocationById(id); 
 } 
 }
