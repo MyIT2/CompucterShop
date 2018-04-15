@@ -39,9 +39,9 @@ public void delete(@RequestParam("delete")Long id )
 { 
 comp.delete(id); 
 }
-@RequestMapping(value="getPersonalById/idBrand",method = RequestMethod.GET) 
+@RequestMapping(value="/getPersonalById/",method = RequestMethod.GET) 
 public Personal getPersonalById(
-        @RequestParam(value = "idBrand",required = false,defaultValue = "0")Long id){ 
+        @RequestParam(value = "idPersonal",required = false,defaultValue = "0")Long id){ 
 return comp.getPersonalById(id);
 } 
 }

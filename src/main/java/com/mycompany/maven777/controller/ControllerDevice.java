@@ -39,7 +39,7 @@ public void delete(
 { 
     comp.delete(id); 
 }
-@RequestMapping(value="getDeviceById/",method = RequestMethod.GET) 
+@RequestMapping(value="/getDeviceById/",method = RequestMethod.GET) 
 public Device getDeviceById(
         @RequestParam(value = "idDevice",required = false,defaultValue = "0")  Long id){ 
 return comp.getDeviceById(id); 

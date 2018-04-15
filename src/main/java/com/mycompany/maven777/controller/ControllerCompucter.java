@@ -23,13 +23,13 @@ public class ControllerCompucter {
         return comp.getAll();
     }
 
-    @RequestMapping(value = "/insertCompucterById", method = RequestMethod.POST)
+    @RequestMapping(value = "/insert/", method = RequestMethod.POST)
     public void insert(
             @RequestBody Compucter compucter) {
         comp.insert(compucter);
     }
 
-    @RequestMapping(value = "/updateCompucterById", method = RequestMethod.PUT)
+    @RequestMapping(value = "/update/", method = RequestMethod.PUT)
     public void update(
             @RequestBody Compucter compucter) {
         comp.update(compucter);
@@ -41,7 +41,7 @@ public class ControllerCompucter {
         comp.delete(id);
     }
 
-    @RequestMapping(value = "/getCompucterById/idCompucter", method = RequestMethod.GET)
+    @RequestMapping(value = "/getCompucterById/", method = RequestMethod.GET)
     public Compucter getCompucterById(
             @RequestParam(value = "idCompucter", required = false, defaultValue = "0") Long id) {
         return comp.getCompucterById(id);
