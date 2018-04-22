@@ -7,38 +7,66 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <resultMap id="setId_device" type="com.mycompany.testwebproject.dao.type.TestType"> 
 <id property="id" column="id"/> 
-<result property="testStr" column="testStr"/> 
+<result property="testStr" column="testStr"/>
 </resultMap> 
+
+
+<resultMap id="setId_Compucter_has_Device" type="com.mycompany.testwebproject.dao.type.TestType"> 
+<id property="id" column="id"/> 
+<result property="detail" column="device"/>
+</resultMap>
 
 <!— List<AnswerDTO> getAnswerByQuestion(Long idQuestion);--> 
 <select id="getCompucterById" resultMap="setId_compucter"parametrType = "javalong.long"> 
 SELECT 
 ec.id, 
-ec.detail   
+ec.detail,
+ec.device       
 FROM 
 AS ec;
 WHERE
 mo.id = #{id}     
 </select>
+
+<select id="getCompucter_has_DeviceById" parameterType="java.lang.Long" resultMap="Compucter_has_device"> 
+SELECT compucter.*,device.* from compucter
+Join Compucter_has_Device on Compucter_has_Device.id_Compucter = Compucter.id
+Join Device on Device.id = Compucter_has_Device.id.Device
+             
+ec.id_Compucter, 
+ec.id_Device 
+FROM 
+films AS ec; 
+WHERE
+id = #{id}    
+id_Compucter = #{id_compucter} 
+id_Device = #{id_device} 
+</select>
+
 <insert id="insertCompucter" parameterType="com.mycompany.maven777.Dao.Type.Device"> 
 INSERT INTO 
-Compucter(id,detail) 
+Compucter(id,detail,device) 
 Values 
-(#{id},  
+(#{id},
+#{device},   
 #{detail}) 
-</insert> 
+</insert>
+ 
 <update id="updateCompucterById" parameterType="com.mycompany.maven777.Dao.Type.Device" resultMap="testResult"> 
 UPDATE 
 Compucter
 SET 
-detail = #{detail},  
+detail = #{detail},
+device = #{device},      
 WHERE 
 id = #{id} 
-</update> 
+</update>
+ 
 <delete id="deleteCompucterById" parameterType="com.mycompany.maven777.Dao.Type.Device" resultMap="testResult"> 
 DELETE FROM 
 Compucter 
 WHERE 
-Device.id = #{id} 
+Compucter.id = #{id} 
 </delete>
+
 </mapper>

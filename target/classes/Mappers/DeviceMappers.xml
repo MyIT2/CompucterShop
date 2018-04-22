@@ -5,17 +5,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.mycompany.testwebproject.mybatisMappers" > 
 
-<resultMap id="setId_device" type="com.mycompany.testwebproject.dao.type.TestType"> 
+<resultMap id="setId_device" type="com.mycompany.maven777.dao.type.Device"> 
 <id property="id" column="id"/> 
-<result property="testStr" column="testStr"/> 
+<result property="Device" column="Device"/> 
 </resultMap> 
 
 <!— List<AnswerDTO> getAnswerByQuestion(Long idQuestion);--> 
 <select id="getDeviceById" resultMap="setId_device"parametrType = "javalong.long"> 
 SELECT 
 ec.id, 
-ec.options
-ec.price     
+ec.id_device    
 FROM 
 AS ec;
 WHERE
@@ -23,18 +22,16 @@ mo.id = #{id}
 </select>
 <insert id="insertDevice" parameterType="com.mycompany.maven777.Dao.Type.Device"> 
 INSERT INTO 
-Device(id,option,price) 
+Device(id,id_device) 
 Values 
-(#{id}, 
-#{option}, 
-#{price}) 
+(#{id},  
+#{id_device}) 
 </insert> 
 <update id="updateDeviceById" parameterType="com.mycompany.maven777.Dao.Type.Device" resultMap="testResult"> 
 UPDATE 
 Device 
 SET 
-option = #{option},
-price = #{price},  
+id_device = #{id_device}  
 WHERE 
 id = #{id} 
 </update> 

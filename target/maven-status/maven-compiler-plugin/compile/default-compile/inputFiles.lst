@@ -12,6 +12,7 @@ D:\Documents\Maven777\src\main\java\com\mycompany\maven777\dao\type\Personal.jav
 D:\Documents\Maven777\src\main\java\com\mycompany\maven777\dao\type\Device.java
 D:\Documents\Maven777\src\main\java\com\mycompany\maven777\mappers\CompucterMappers.java
 D:\Documents\Maven777\src\main\java\com\mycompany\maven777\Service\Interface\DeviceService.java
+D:\Documents\Maven777\src\main\java\com\mycompany\maven777\dao\type\Compucter_has_Device.java
 D:\Documents\Maven777\src\main\java\com\mycompany\maven777\Config\AppConfig.java
 D:\Documents\Maven777\src\main\java\com\mycompany\maven777\Config\DataConfigJava.java
 D:\Documents\Maven777\src\main\java\com\mycompany\maven777\Service\Impl\LocationServiceImpl.java

@@ -6,6 +6,7 @@ com\mycompany\maven777\Service\Interface\LocationService.class
 com\mycompany\maven777\dao\type\Device.class
 com\mycompany\maven777\dao\type\Compucter.class
 com\mycompany\maven777\mappers\CompucterMappers.class
+com\mycompany\maven777\dao\type\Compucter_has_Device.class
 com\mycompany\maven777\Service\Interface\PersonalService.class
 com\mycompany\maven777\Service\Impl\DeviceServiceImpl.class
 com\mycompany\maven777\Service\Interface\CompucterService.class

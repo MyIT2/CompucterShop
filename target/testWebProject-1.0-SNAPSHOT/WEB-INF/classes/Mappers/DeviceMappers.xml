@@ -14,8 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <select id="getDeviceById" resultMap="setId_device"parametrType = "javalong.long"> 
 SELECT 
 ec.id, 
-ec.options
-ec.price     
+ec.id_device    
 FROM 
 AS ec;
 WHERE
@@ -23,18 +22,16 @@ mo.id = #{id}
 </select>
 <insert id="insertDevice" parameterType="com.mycompany.maven777.Dao.Type.Device"> 
 INSERT INTO 
-Device(id,option,price) 
+Device(id,id_device) 
 Values 
-(#{id}, 
-#{option}, 
-#{price}) 
+(#{id},  
+#{id_device}) 
 </insert> 
 <update id="updateDeviceById" parameterType="com.mycompany.maven777.Dao.Type.Device" resultMap="testResult"> 
 UPDATE 
 Device 
 SET 
-option = #{option},
-price = #{price},  
+id_device = #{id_device}  
 WHERE 
 id = #{id} 
 </update> 

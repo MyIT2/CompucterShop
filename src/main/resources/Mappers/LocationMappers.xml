@@ -5,9 +5,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.mycompany.testwebproject.mybatisMappers" > 
 
-<resultMap id="setId_location" type="com.mycompany.testwebproject.dao.type.TestType"> 
+<resultMap id="setId_location" type="com.mycompany.maven777.dao.type.Location"> 
 <id property="id" column="id"/> 
-<result property="testStr" column="testStr"/> 
+<result property="Location" column="Location"/> 
 </resultMap> 
 
 <!— List<AnswerDTO> getAnswerByQuestion(Long idQuestion);--> 
@@ -17,7 +17,8 @@ ec.id,
 ec.country
 ec.city
 ec.adress
-ec.working_house             
+ec.working_house
+ec.id_location                 
 FROM 
 AS ec;
 WHERE
@@ -25,17 +26,19 @@ mo.id = #{id}
 </select> 
 <insert id="insertLocation" parameterType="com.mycompany.maven777.Dao.Type.Location"> 
 INSERT INTO 
-location(id,country,city,adress,working_house) 
+location(id,country,city,adress,working_house,id_location) 
 Values 
 (#{id}, 
 #{country}, 
-#{adress}, 
+#{adress},
+#{id_device}, 
 #{working_house}) 
 </insert> 
 <update id="updateLocationById" parameterType="com.mycompany.maven777.Dao.Type.Location" resultMap="testResult"> 
 UPDATE 
 Location 
-SET 
+SET
+id_device = #{id_device}, 
 country = #{country},
 adress = #{adress},  
 working_house = #{working_house}

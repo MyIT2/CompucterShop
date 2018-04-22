@@ -4,6 +4,7 @@ public class Compucter
     private String detail;
     private int id_compucter;
     private int id_device;
+   
 
     public void setDetail(String detail) {
         this.detail = detail;
