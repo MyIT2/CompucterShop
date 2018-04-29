@@ -5,9 +5,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.mycompany.testwebproject.mybatisMappers" > 
 
-<resultMap id="setId_device" type="com.mycompany.testwebproject.dao.type.TestType"> 
+<resultMap id="setId_device" type="com.mycompany.maven777.dao.type.Device"> 
 <id property="id" column="id"/> 
-<result property="testStr" column="testStr"/> 
+<result property="Device" column="Device"/> 
 </resultMap> 
 
 <!— List<AnswerDTO> getAnswerByQuestion(Long idQuestion);--> 

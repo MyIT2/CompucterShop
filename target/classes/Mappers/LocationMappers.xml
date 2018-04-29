@@ -6,8 +6,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.mycompany.testwebproject.mybatisMappers" > 
 
 <resultMap id="setId_location" type="com.mycompany.maven777.dao.type.Location"> 
-<id property="id" column="id"/> 
-<result property="Location" column="Location"/> 
+<id property="id_location" column="place"/> 
+<result property="id_Location" column="place"/> 
 </resultMap> 
 
 <!— List<AnswerDTO> getAnswerByQuestion(Long idQuestion);--> 

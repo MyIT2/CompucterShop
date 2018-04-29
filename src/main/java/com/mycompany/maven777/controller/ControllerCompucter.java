@@ -2,6 +2,7 @@ package com.mycompany.maven777.controller;
 
 import com.mycompany.maven777.Service.Interface.CompucterService;
 import com.mycompany.maven777.dao.type.Compucter;
+import com.mycompany.maven777.dao.type.Compucter_has_Device;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class ControllerCompucter {
     public List<Compucter> getAll() {
         return comp.getAll();
     }
-
+  
     @RequestMapping(value = "/insert/", method = RequestMethod.POST)
     public void insert(
             @RequestBody Compucter compucter) {
@@ -45,5 +46,10 @@ public class ControllerCompucter {
     public Compucter getCompucterById(
             @RequestParam(value = "idCompucter", required = false, defaultValue = "0") Long id) {
         return comp.getCompucterById(id);
+    }
+    
+    @RequestMapping(value = "/getCompucter_has_Device/", method = RequestMethod.GET)
+    public List<Compucter_has_Device> getCompucter_has_Device(Long id) {
+        return comp.getCompucter_has_Device(id);
     }
 }
